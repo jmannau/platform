@@ -1,3 +1,5 @@
+# Cloned from NGRX Platform - sample repo to show actionSanitizer for StoreDevTools does not cmopile using --prod
+
 # @ngrx
 
 Reactive libraries for Angular
