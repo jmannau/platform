@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
-import { StoreModule } from '@ngrx/store';
+import { StoreModule, Action } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { DBModule } from '@ngrx/db';
 import {
@@ -66,6 +66,7 @@ import { environment } from '../environments/environment';
     StoreDevtoolsModule.instrument({
       name: 'NgRx Book Store DevTools',
       logOnly: environment.production,
+      actionSanitizer: (action: Action) => ({ ...action }),
     }),
 
     /**
